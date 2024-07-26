@@ -44,4 +44,23 @@ document.addEventListener('keydown', function (event) {
 
 function startGame() {
     GameHeader.style.display = 'none';
+    userSequence = 0;
+    sequence = ['Numpad1', 'Numpad2', 'Numpad1', "Numpad2", 'Numpad3', 'Numpad4', 'Numpad5', 'Numpad5', 'Numpad6', 'Numpad7', 'Numpad8'];
+    playSequence();
+}
+
+function playSequence() {
+    // play jingle and highlight buttons 
+}
+
+function handleButtonPattern() {
+    // confirming if the current/recent button press continues to match the sequence
+    // does the userSequence array match the sequence array
+    if (!checkSequence()) {
+        alert('Game Over - You are not Jake-worthy');
+        GameHeader.style.display = 'show';
+    }
+    else if (userSequence.length === sequence.length) {
+        alert('Success - You are the new Jake from State Farm')
+    }
 }
