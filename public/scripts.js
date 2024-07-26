@@ -64,3 +64,10 @@ function handleButtonPattern() {
         alert('Success - You are the new Jake from State Farm')
     }
 }
+
+function checkSequence() {
+    if (userSequence[i] !== sequence[i]) {
+        return false;
+    }
+    return true;
+}
